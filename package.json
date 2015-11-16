@@ -1,0 +1,22 @@
+{
+  "name": "generator-base-project",
+  "version": "1.0.0",
+  "description": "Generator for base project structure",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "yeoman-generator",
+    "project",
+    "automization",
+    "setup"
+  ],
+  "author": "Michael Andorfer <mandorfer.mmt-b2014@fh-salzburg.ac.at>",
+  "license": "MIT",
+  "devDependencies": {
+    "git-info": "^1.0.1",
+    "inquirer": "^0.11.0",
+    "yeoman-generator": "^0.21.1"
+  },
+  "dependencies": {
+  }
+}
