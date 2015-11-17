@@ -1,11 +1,17 @@
-# Project Base
+# Project Base Generator
 
-> This project provides a base project structure for upcoming projects
+> This project provides a base project structure generator for upcoming projects
 
 # Setup
 
 ```js
 npm install
+```
+
+# Debug
+
+```js
+npm link
 ```
 
 # Test
