@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     browserify: {
       dist: {
         files: {
-          '<%= config.dist %>/scripts/app.js': ['<%= config.app %>/scripts/**/*.js']
+          '<%= config.dist %>/scripts/js/app.js': ['<%= config.app %>/assets/scripts/js/**/*.js']
         },
         options: {
           browserifyOptions: {
@@ -91,19 +91,19 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: '<%= config.app %>',
-            src: ['styles/**/*.css'],
+            src: ['assets/styles/**/*.css'],
             dest: '<%= config.dist %>'
           },
           {
             expand: true,
             cwd: '<%= config.app %>',
-            src: ['icons/**/*'],
+            src: ['assets/icons/**/*'],
             dest: '<%= config.dist %>'
           },
           {
             expand: true,
             cwd: '<%= config.app %>',
-            src: ['images/**/*{.png,.gif,.jpg}'],
+            src: ['assets/images/**/*{.png,.gif,.jpg}'],
             dest: '<%= config.dist %>'
           }
         ]
@@ -111,7 +111,7 @@ module.exports = function(grunt) {
     },
 
     eslint: {
-      target: ['<%= config.app %>/scripts/*.js']
+      target: ['<%= config.app %>/assets/scripts/js/*.js']
     },
 
     sass: {
@@ -123,9 +123,9 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: '<%= config.app %>/styles',
+            cwd: '<%= config.app %>/assets/styles',
             src: ['*.scss'],
-            dest: '<%= config.dist %>/styles/',
+            dest: '<%= config.dist %>/assets/styles/',
             ext: '.css'
           }
         ]
@@ -141,23 +141,23 @@ module.exports = function(grunt) {
         tasks: ['copy']
       },
       icons: {
-        files: ['<%= config.app %>/icons/**/*'],
+        files: ['<%= config.app %>/assets/icons/**/*'],
         tasks: ['copy']
       },
       images: {
-        files: ['<%= config.app %>/images/**/*{.png,.gif,.jpg}'],
+        files: ['<%= config.app %>/assets/images/**/*{.png,.gif,.jpg}'],
         tasks: ['copy']
       },
       scripts: {
-        files: ['<%= config.app %>/scripts/**/*.js'],
+        files: ['<%= config.app %>/assets/scripts/js/**/*.js'],
         tasks: ['eslint', 'browserify']
       },
       templates: {
-        files: ['<%= config.app %>/scripts/templates/**/*.hbs'],
+        files: ['<%= config.app %>/assets/scripts/templates/**/*.hbs'],
         tasks: ['browserify']
       },
       styles: {
-        files: ['<%= config.app %>/styles/*.scss'],
+        files: ['<%= config.app %>/assets/styles/*.scss'],
         tasks: ['sass']
       },
       gruntfile: {
