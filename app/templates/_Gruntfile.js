@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     browserify: {
       dist: {
         files: {
-          '<%= config.dist %>/scripts/js/app.js': ['<%= config.app %>/assets/scripts/js/**/*.js']
+          '<%= config.dist %>/assets/scripts/js/app.js': ['<%= config.app %>/assets/scripts/js/**/*.js']
         },
         options: {
           browserifyOptions: {
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'node_modules/bootstrap/dist',
-            src: ['fonts/**'],
+            src: ['assets/fonts/**'],
             dest: '<%= config.dist %>'
           },
           {
@@ -105,7 +105,19 @@ module.exports = function(grunt) {
             cwd: '<%= config.app %>',
             src: ['assets/images/**/*{.png,.gif,.jpg}'],
             dest: '<%= config.dist %>'
-          }
+          },
+			{
+				expand: true,
+				cwd: '<%= config.app %>',
+				src: ['assets/audio/**/*'],
+				dest: '<%= config.dist %>'
+			},
+			{
+				expand: true,
+				cwd: '<%= config.app %>',
+				src: ['assets/video/**/*'],
+				dest: '<%= config.dist %>'
+			}
         ]
       }
     },
@@ -148,6 +160,14 @@ module.exports = function(grunt) {
         files: ['<%= config.app %>/assets/images/**/*{.png,.gif,.jpg}'],
         tasks: ['copy']
       },
+		video: {
+			files: ['<%= config.app %>/assets/video/**/*'],
+			tasks: ['copy']
+		},
+		audio: {
+			files: ['<%= config.app %>/assets/audio/**/*'],
+			tasks: ['copy']
+		},
       scripts: {
         files: ['<%= config.app %>/assets/scripts/js/**/*.js'],
         tasks: ['eslint', 'browserify']
