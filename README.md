@@ -14,6 +14,12 @@ npm install
 npm link
 ```
 
+# Usage
+
+```js
+yo
+```
+
 # Test
 
 ```
