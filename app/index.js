@@ -50,6 +50,27 @@ module.exports = generators.Base.extend({
       this.templatePath('nvmrc'),
       this.destinationPath('.nvmrc')
     )
+	this.fs.copy(
+		this.templatePath('README.md'),
+		this.destinationPath('README.md')
+	)
+	this.fs.copy(
+		this.templatePath('LICENSE'),
+		this.destinationPath('LICENSE')
+	)
+	this.fs.copy(
+		this.templatePath('CONTRIBUTING.md'),
+		this.destinationPath('CONTRIBUTING.md')
+	)
+	this.fs.copy(
+		this.templatePath('docs/'),
+		this.destinationPath('docs/')
+	)
+	this.fs.copy(
+		this.templatePath('test/'),
+		this.destinationPath('test/')
+	)
+
 
     this.fs.copyTpl(
       this.templatePath('index.html'),
@@ -58,24 +79,34 @@ module.exports = generators.Base.extend({
     )
 
     this.fs.copy(
-      this.templatePath('scripts/app.js'),
-      this.destinationPath('app/scripts/app.js')
+      this.templatePath('assets/scripts/js/app.js'),
+      this.destinationPath('app/assets/scripts/js/app.js')
     )
 
     this.fs.copy(
-      this.templatePath('styles/app.scss'),
-      this.destinationPath('app/styles/app.scss')
+      this.templatePath('assets/styles/app.scss'),
+      this.destinationPath('app/assets/styles/app.scss')
     )
 
     this.fs.copy(
-      this.templatePath('icons/*'),
-      this.destinationPath('app/icons/')
+      this.templatePath('assets/icons/*'),
+      this.destinationPath('app/assets/icons/')
     )
 
     this.fs.copy(
-      this.templatePath('images/*'),
-      this.destinationPath('app/images/')
+      this.templatePath('assets/images/*'),
+      this.destinationPath('app/assets/images/')
     )
+
+	this.fs.copy(
+		this.templatePath('assets/video/*'),
+		this.destinationPath('app/assets/video/')
+	)
+
+	this.fs.copy(
+		this.templatePath('assets/audio/*'),
+		this.destinationPath('app/assets/audio/')
+	)
   },
   install() {
     this.npmInstall()
