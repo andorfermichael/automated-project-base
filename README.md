@@ -26,7 +26,7 @@ yo
 npm test
 ```
 
-## Authors
+## Author
 
 [Michael Andorfer](mailto:mandorfer.mmt-b2014@fh-salzburg.ac.at)
 
