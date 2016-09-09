@@ -1,35 +1,35 @@
-# Project Base Generator
+# Automated Project Base
 
-> This project provides a base project structure generator for upcoming projects
+Project skeleton generator for upcoming frontend projects.
 
-# Setup
+## Setup
 
 ```js
 npm install
 ```
 
-# Debug
+## Debug
 
 ```js
 npm link
 ```
 
-# Usage
+## Usage
 
 ```js
 yo
 ```
 
-# Test
+## Test
 
 ```
 npm test
 ```
 
-# Authors
+## Authors
 
-- [Michael Andorfer](mailto:mandorfer.mmt-b2014@fh-salzburg.ac.at)
+[Michael Andorfer](mailto:mandorfer.mmt-b2014@fh-salzburg.ac.at)
 
-# License
+## License
 
-[The MIT License](https://opensource.org/licenses/MIT)
+[GNU General Public License, version 3 (GPL-3.0)](https://opensource.org/licenses/GPL-3.0)
